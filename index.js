@@ -61,6 +61,10 @@ const runDeleteReview = async (id) => {
   return result;
 };
 
+app.get("/test", (req, res) => {
+  res.send("Test Changes Update");
+});
+
 app.get("/review", async (req, res) => {
   const result = await runGetReview().catch(console.dir);
   res.send(result);
